@@ -1,50 +1,43 @@
 import java.util.*;
 
-public class CollectionExample {
+public class Main {
     public static void main(String[] args) {
-       
-        Set<String> set = new HashSet<>();
+        // Set Example
+        Set<String> fruitSet = new HashSet<>();
+        fruitSet.add("Grape");
+        fruitSet.add("Kiwi");
+        fruitSet.add("Orange");
+        fruitSet.add("Mango");
 
-        
-        set.add("Apple");
-        set.add("Banana");
-        set.add("Orange");
-        set.add("Mango");
+        System.out.println("Set Example:");
+        for (String fruit : fruitSet) {
+            System.out.println(fruit);
+        }
+        System.out.println();
 
-        
-        System.out.println("Set Elements: " + set);
+        // List Example
+        List<Integer> numberList = new ArrayList<>();
+        numberList.add(1);
+        numberList.add(2);
+        numberList.add(3);
+        numberList.add(4);
 
-       
-        List<Integer> list = new ArrayList<>();
+        System.out.println("List Example:");
+        for (int number : numberList) {
+            System.out.println(number);
+        }
+        System.out.println();
 
-       
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
+        // Map Example
+        Map<String, Integer> studentScores = new HashMap<>();
+        studentScores.put("Alice", 8);
+        studentScores.put("Bob", 9);
+        studentScores.put("Charlie", 7);
+        studentScores.put("David", 4);
 
-        
-        System.out.println("List Elements: " + list);
-
-        
-        Map<String, Integer> map = new HashMap<>();
-
-        
-        map.put("John", 25);
-        map.put("Alice", 30);
-        map.put("Bob", 22);
-        map.put("Eve", 28);
-
-        
-        System.out.println("Map Elements: " + map);
-
-        
-        String name = "Alice";
-        if (map.containsKey(name)) {
-            int age = map.get(name);
-            System.out.println(name + "'s age is " + age + " years.");
-        } else {
-            System.out.println(name + " not found in the map.");
+        System.out.println("Map Example:");
+        for (Map.Entry<String, Integer> entry : studentScores.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }
 }
